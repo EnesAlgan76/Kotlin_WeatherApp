@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/myConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <pl.utkala.searchablespinner.SearchableSpinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:padding="8dp"
+            app:dialogTitle="Şehir Seçin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTemp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.762"
+            app:layout_constraintStart_toEndOf="@+id/tvTemp"
+            app:layout_constraintTop_toBottomOf="@+id/spinner"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/a01d" />
+
+        <TextView
+            android:id="@+id/tvTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="70dp"
+            android:text="41"
+            android:textSize="96sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+
+        <TextView
+            android:id="@+id/celsiusIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="°C"
+            android:textSize="34sp"
+            app:layout_constraintStart_toEndOf="@+id/tvTemp"
+            app:layout_constraintTop_toTopOf="@+id/tvTemp" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="131dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="70dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Hello World!"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDay"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="0dp"
+            android:fadingEdge="vertical"
+            android:fadingEdgeLength="24dp"
+            android:requiresFadingEdge="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvHour"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHour"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            app:fastScrollEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivIcon" />
+
+        <TextView
+            android:id="@+id/tvCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="TextView"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/ivIcon"
+            app:layout_constraintStart_toStartOf="@+id/ivIcon"
+            app:layout_constraintTop_toBottomOf="@+id/ivIcon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

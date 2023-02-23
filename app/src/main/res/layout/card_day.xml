@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/enes_rectangle"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/tvday_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Pazartesi"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/rvDetails"
+        app:layout_constraintEnd_toStartOf="@+id/ivicon_day"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/ivicon_day"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="116dp"
+        app:layout_constraintBottom_toTopOf="@+id/rvDetails"
+        app:layout_constraintEnd_toStartOf="@+id/tvmax_temp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/a02d" />
+
+    <TextView
+        android:id="@+id/tvmin_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20°C"
+        android:textColor="#DADADA"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/rvDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/tvmax_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="42 °C"
+        android:textColor="#FAFAFA"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/rvDetails"
+        app:layout_constraintEnd_toStartOf="@+id/tvmin_temp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivicon_day" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
